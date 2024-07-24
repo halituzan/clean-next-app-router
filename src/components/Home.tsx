@@ -1,35 +1,13 @@
 "use client";
-import i18n from "@/configs/i18n";
 import { Icon } from "@iconify/react";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
+
 type Props = {};
 
 const HomePage = (props: Props) => {
-  const { t } = useTranslation("common");
+  const t = useTranslations("Common");
 
-  const router = useRouter();
-
-
-  const [loading, setLoading] = useState(true);
-  const changeLanguage = (lng: any) => {
-    i18n.initLanguage(lng.target.value);
-  };
-  const selectedLang = window.localStorage.getItem("lng");
-  // const changeLanguage = (e: any) => {
-  //   window.localStorage.setItem("lng", e.target.value);
-  //   router.refresh();
-  // };
-
-  useEffect(() => {
-    i18n.initLanguage(selectedLang);
-    setLoading(false);
-  }, []);
-
-  if (loading) {
-    return;
-  }
+  const changeLanguage = (lng: any) => {};
 
   return (
     <div className='flex flex-col justify-center items-center max-w-[350px] text-center'>
@@ -39,19 +17,15 @@ const HomePage = (props: Props) => {
             htmlFor='language'
             className='block mb-1 text-sm font-medium text-gray-900 '
           >
-            {t("select.language")}
+            {t("selectLanguage")}
           </label> */}
           <select
             onChange={(e) => changeLanguage(e)}
             id='language'
             className='bg-rose-50 w-24 border-transparent shadow-md text-gray-900 text-sm focus:ring-rose-500 focus:border-rose-500 py-2 px-1'
           >
-            <option value='en' selected={selectedLang === "en"}>
-              {t("english")}
-            </option>
-            <option value='tr' selected={selectedLang === "tr"}>
-              {t("turkish")}
-            </option>
+            <option value='en'>{t("english")}</option>
+            <option value='tr'>{t("turkish")}</option>
           </select>
         </form>
       </div>
@@ -72,7 +46,7 @@ const HomePage = (props: Props) => {
             >
               @reduxjs/toolkit:
             </a>
-            <span className='ml-1'>{t("stage.management")}</span>
+            <span className='ml-1'>{t("stageManagement")}</span>
           </li>
           <li>
             <a
@@ -90,7 +64,7 @@ const HomePage = (props: Props) => {
             >
               Tailwindcss:
             </a>
-            <span className='ml-1'>{t("css.library")}</span>
+            <span className='ml-1'>{t("cssLibrary")}</span>
           </li>
           <li>
             <a
@@ -99,7 +73,7 @@ const HomePage = (props: Props) => {
             >
               Iconify:
             </a>
-            <span className='ml-1'>{t("icon.library")}</span>
+            <span className='ml-1'>{t("iconLibrary")}</span>
           </li>
         </ul>
       </div>

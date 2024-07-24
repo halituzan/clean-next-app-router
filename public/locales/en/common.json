@@ -7,5 +7,5 @@
     "localization": "Localization is configured.",
     "english": "English",
     "turkish": "Turkish",
-    "select.language": "Select an language"
+    "selectLanguage": "Select an language"
 }

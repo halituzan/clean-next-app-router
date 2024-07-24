@@ -1,0 +1,17 @@
+{
+    "Common": {
+        "title": "A Next.js project as clean as your heart.",
+        "content": "# Ready Installations",
+        "stageManagement": "State management is utilized.",
+        "cssLibrary": "A CSS library is used.",
+        "iconLibrary": "An icon library is used.",
+        "localization": "Localization is configured.",
+        "english": "English",
+        "turkish": "Turkish",
+        "selectLanguage": "Select an language"
+    },
+    "Footer": {
+        "name": "Halit Uzan",
+        "madeBy": "made by ❤"
+    }
+}
