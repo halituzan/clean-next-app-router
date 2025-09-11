@@ -6,7 +6,7 @@
 
 [react-i18n:](https://react.i18next.com/) State management is utilized.
 
-[Tailwindcss:](https://tailwindcss.com/) A CSS library is used.
+[Tailwindcss:](https://tailwindcss.com/) A CSS library is used. (v4.1)
 
 [Iconify:](https://iconify.design/) An icon library is used.
 
